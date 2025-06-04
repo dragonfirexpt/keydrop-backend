@@ -38,6 +38,7 @@ wss.on('connection', (ws) => {
 });
 
 function broadcastUserCount() {
+  console.log('🔴 User changed');
   const payload = JSON.stringify({
     event: 'userCount',
     count: wss.clients.size
